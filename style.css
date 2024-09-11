@@ -1,4 +1,166 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  font-family: "Chakra Petch", sans-serif;
+  text-decoration: none;
+  color: #000;
+  background-color: #edf2f8;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #edf2f8;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar {
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.menu-list ul {
+  padding-right: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+.menu-list ul li a {
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.menu-list ul li a:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #e50914;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.menu-list ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.menu-list ul li a:hover {
+  color: #e50914;
+}
+
+.hero-section {
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 13.2ch; /* Full width of the text */
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+.hero-section h1 span {
+  font: bold 100% "Chakra Petch", sans-serif;
+  border-right: 0.1em solid black;
+  width: 13.2ch; /* Set this to the full width of the text */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(13, end) infinite, blink-caret 0.5s step-end infinite;
+}
+
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.loader .pattern-1 {
+  position: absolute;
+  background-color: #e50914;
+  width: 100px;
+  height: 100px;
+  -webkit-clip-path: polygon(0 10%, 70% 90%, 40% 90%, 0 45%);
+          clip-path: polygon(0 10%, 70% 90%, 40% 90%, 0 45%);
+}
+
+.loader .pattern-2 {
+  position: absolute;
+  background-color: #e50914;
+  width: 120px;
+  height: 90px;
+  -webkit-clip-path: polygon(100% 10%, 100% 45%, 83% 65%, 55% 65%);
+          clip-path: polygon(100% 10%, 100% 45%, 83% 65%, 55% 65%);
+}
+
+.loader .pattern-1 .pattern-1-shade {
+  position: absolute;
+  transform: translateX(-20px);
+  opacity: 0.7;
+  z-index: 10;
+  background-color: white;
+  width: 20px;
+  height: 200px;
+  animation: shiny 1s infinite;
+}
+
+@keyframes shiny {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(140px);
+  }
+}
+.project-heading {
+  font-size: 2rem;
+  text-align: center;
+}
+.project-heading span {
+  color: #e50914;
 }/*# sourceMappingURL=style.css.map */
