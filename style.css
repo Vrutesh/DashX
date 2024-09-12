@@ -5,12 +5,15 @@
   font-family: "Chakra Petch", sans-serif;
   text-decoration: none;
   color: #000;
-  background-color: #edf2f8;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+body {
+  background-color: #edf2f8;
 }
 
 ::-webkit-scrollbar {
@@ -41,15 +44,16 @@ html {
   left: 0;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
 }
 
 .menu-list ul {
+  min-width: 50%;
   padding-right: 2rem;
   display: flex;
-  justify-content: flex-end;
   gap: 2rem;
 }
 .menu-list ul li a {
@@ -76,10 +80,14 @@ html {
   color: #e50914;
 }
 
+#sidebar {
+  display: none;
+}
+
 .hero-section {
   min-height: 100vh;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .hero-section h1 {
@@ -163,4 +171,81 @@ html {
 }
 .project-heading span {
   color: #e50914;
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 40px;
+}
+
+.project-item {
+  width: 300px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1.3rem;
+  padding: 20px;
+}
+
+.project-card .project-title {
+  padding-bottom: 1rem;
+}
+
+.project-desc {
+  text-align: justify;
+}
+
+.project-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.project-btn a {
+  text-decoration: none;
+  color: #000;
+}
+
+.project-btn .built {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.project-btn .built:hover {
+  color: #e50914;
+  transform: translateY(-7px);
+}
+
+.project-btn .built:active {
+  transform: translateY(-1px);
+}
+
+.glow-btn {
+  padding: 1em 2em;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.glow-btn:hover {
+  background-color: #e50914;
+  box-shadow: 0px 15px 20px rgb(113, 17, 17);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.glow-btn:active {
+  transform: translateY(-1px);
 }/*# sourceMappingURL=style.css.map */
