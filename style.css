@@ -48,6 +48,8 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  background-color: #edf2f8;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .menu-list ul {
@@ -165,6 +167,10 @@ body {
     transform: translateX(140px);
   }
 }
+#project {
+  padding: 6rem;
+}
+
 .project-heading {
   font-size: 2rem;
   text-align: center;
@@ -177,12 +183,12 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 2rem;
-  padding-top: 40px;
+  gap: 2.4rem;
+  padding: 40px 80px 0 80px;
 }
 
 .project-item {
-  width: 300px;
+  flex: 1 0 300px;
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 1.3rem;
@@ -248,4 +254,19 @@ body {
 
 .glow-btn:active {
   transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    text-align: center;
+  }
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  .hero-section h2 {
+    font-size: 1.2rem;
+  }
+  .project-list {
+    padding: 40px 0;
+  }
 }/*# sourceMappingURL=style.css.map */
