@@ -221,7 +221,7 @@ body {
 }
 
 .project-item {
-  width: 300px;
+  max-width: 300px;  
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 1.3rem;
@@ -482,14 +482,13 @@ body {
 
   .project-list {
     padding: 40px 0;
-  }
-
-  .project-item {
-    flex: 1 0 300px;
+    display: flex;
+    justify-content: center;
   }
 
   #footer {
     text-align: center;
+    padding: 0 20px;
   }
 
   .footer-logo h1 {
