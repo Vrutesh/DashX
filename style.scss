@@ -255,6 +255,7 @@ body {
   opacity: 4;
   right: 0;
 }
+
 //***** project
 
 .project-heading {
@@ -283,6 +284,7 @@ body {
 
 .project-card .project-title {
   padding-bottom: 1rem;
+  text-align: center;
 }
 
 .project-desc {
@@ -450,6 +452,7 @@ body {
 .socialcontainer:hover .social-icon-4 {
   transform: translateY(-70px);
 }
+
 
 //***** Media Queries for max-width 600px
 @media (max-width: 600px) {
