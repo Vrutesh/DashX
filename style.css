@@ -7,9 +7,20 @@
   color: #000;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 9.6rem 2.4rem;
+}
+
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -31,25 +42,23 @@ body {
   border-radius: 10px;
 }
 
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #navbar {
-  padding: 1rem;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #edf2f8;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  z-index: 1000;
+}
+
+#navbar .container {
+  padding: 1rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
-  background-color: #edf2f8;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .nav-logo span {
@@ -57,8 +66,6 @@ body {
 }
 
 .menu-list ul {
-  min-width: 50%;
-  padding-right: 2rem;
   display: flex;
   gap: 2rem;
 }
@@ -100,6 +107,9 @@ body {
 
 .hero-section {
   min-height: 100vh;
+}
+
+.hero-section .container {
   flex-direction: column;
   gap: 1.2rem;
 }
@@ -113,7 +123,7 @@ body {
     width: 0;
   }
   50% {
-    width: 13.2ch; /* Full width of the text */
+    width: 13.2ch;
   }
   100% {
     width: 0;
@@ -124,13 +134,13 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: black;
+    border-color: #000;
   }
 }
 .hero-section h1 span {
   font: bold 100% "Chakra Petch", sans-serif;
-  border-right: 0.1em solid black;
-  width: 13.2ch; /* Set this to the full width of the text */
+  border-right: 0.1em solid #000;
+  width: 13.2ch;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 5s steps(13, end) infinite, blink-caret 0.5s step-end infinite;
@@ -179,10 +189,6 @@ body {
     transform: translateX(140px);
   }
 }
-#project {
-  padding: 6rem;
-}
-
 .project-heading {
   font-size: 2rem;
   text-align: center;
@@ -193,9 +199,9 @@ body {
 
 .project-list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2.4rem;
+  gap: 3rem;
   padding: 40px 80px 0 80px;
 }
 
@@ -269,12 +275,15 @@ body {
 }
 
 #footer {
+  background-color: #000;
+}
+
+#footer .container {
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background-color: #000;
 }
 
 .footer-logo h1 {
@@ -380,7 +389,7 @@ body {
     width: 30px;
     height: 3px;
     border-radius: 10px;
-    background-color: black;
+    background-color: #000;
     margin: 6px 0;
     transition: 0.4s;
   }
@@ -438,6 +447,9 @@ body {
   .hero-section h2 {
     font-size: 1.2rem;
   }
+  .project-heading {
+    font-size: 1.5rem;
+  }
   .project-list {
     padding: 40px 0;
   }
@@ -446,5 +458,11 @@ body {
   }
   #footer {
     text-align: center;
+  }
+  .footer-logo h1 {
+    font-size: 2rem;
+  }
+  .footer-info p {
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=style.css.map */

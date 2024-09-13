@@ -1,7 +1,8 @@
-// variables
+//*** variables
 $primary-font: "Chakra Petch", sans-serif;
-$bg-color: #edf2f8;
+$white-color: #edf2f8;
 $red-text-color: #e50914;
+$black-color: #000;
 
 * {
   margin: 0;
@@ -9,25 +10,38 @@ $red-text-color: #e50914;
   list-style: none;
   font-family: $primary-font;
   text-decoration: none;
-  color: #000;
+  color: $black-color;
+}
+
+//*** reusable classes
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 9.6rem 2.4rem;
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
-body{
-  background-color: $bg-color;
+body {
+  background-color: $white-color;
 }
 
+//*** scrollbar
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $bg-color;
+  background: $white-color;
 }
 
 /* Handle */
@@ -36,42 +50,35 @@ body{
   border-radius: 10px;
 }
 
-// reusable classes
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-// navbar
-
+//*** navbar
 #navbar {
-  padding: 1rem;
+  width: 100%;
+  height: max-content;
+  background-color: $white-color;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   z-index: 1000;
-  background-color: $bg-color;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.nav-logo span{
+#navbar .container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo span {
   color: $red-text-color;
 }
 
 .menu-list ul {
-  min-width: 50%;
-  padding-right: 2rem;
   display: flex;
   gap: 2rem;
   li a {
     font-size: 1.3rem;
-    color: #000;
+    color: $black-color;
   }
 }
 
@@ -102,13 +109,15 @@ body{
   color: $red-text-color;
 }
 
-.hamburger{
+.hamburger {
   display: none;
 }
 
-// hero-section
+//**** hero-section
 .hero-section {
   min-height: 100vh;
+}
+.hero-section .container {
   flex-direction: column;
   gap: 1.2rem;
 }
@@ -116,13 +125,13 @@ body{
   font-size: 4rem;
 }
 
-// typing text
+//**** typing text
 @keyframes typing {
   0% {
     width: 0;
   }
   50% {
-    width: 13.2ch; /* Full width of the text */
+    width: 13.2ch;
   }
   100% {
     width: 0;
@@ -135,21 +144,21 @@ body{
     border-color: transparent;
   }
   50% {
-    border-color: black;
+    border-color: $black-color;
   }
 }
 
 .hero-section h1 span {
   font: bold 100% $primary-font;
-  border-right: 0.1em solid black;
-  width: 13.2ch; /* Set this to the full width of the text */
+  border-right: 0.1em solid $black-color;
+  width: 13.2ch;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 5s steps(13, end) infinite,
     blink-caret 0.5s step-end infinite;
 }
 
-// loader css
+//**** loader css
 
 .loader {
   position: relative;
@@ -193,10 +202,8 @@ body{
   }
 }
 
-// project
-#project{
-  padding: 6rem;
-}
+//***** project
+
 .project-heading {
   font-size: 2rem;
   text-align: center;
@@ -207,13 +214,13 @@ body{
 
 .project-list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2.4rem;
+  gap: 3rem;
   padding: 40px 80px 0 80px;
 }
 
-.project-item{
+.project-item {
   width: 300px;
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -221,11 +228,11 @@ body{
   padding: 20px;
 }
 
-.project-card .project-title{
+.project-card .project-title {
   padding-bottom: 1rem;
 }
 
-.project-desc{
+.project-desc {
   text-align: justify;
 }
 
@@ -236,18 +243,17 @@ body{
   margin-top: 2rem;
 }
 
-.project-btn a{
+.project-btn a {
   text-decoration: none;
-  color: #000;
+  color: $black-color;
 }
-.project-btn .built{
+.project-btn .built {
   cursor: pointer;
   transition: all 0.3s ease 0s;
-
 }
 
-.project-btn .built:hover{
-  color:$red-text-color;
+.project-btn .built:hover {
+  color: $red-text-color;
   transform: translateY(-7px);
 }
 
@@ -261,7 +267,7 @@ body{
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
-  color: #000;
+  color: $black-color;
   background-color: #fff;
   border: none;
   border-radius: 45px;
@@ -282,32 +288,33 @@ body{
   transform: translateY(-1px);
 }
 
-// footer 
-#footer{
+//**** footer
+#footer {
+  background-color: $black-color;
+}
+
+#footer .container {
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background-color: #000;
 }
-.footer-logo h1{
+.footer-logo h1 {
   font-size: 3rem;
-  color: $bg-color;
+  color: $white-color;
 }
-.footer-logo span{
+.footer-logo span {
   color: $red-text-color;
-  
 }
 
-.footer-info p{
-  color: $bg-color;
+.footer-info p {
+  color: $white-color;
 }
 .social-login-icons {
   display: flex;
   align-items: center;
   gap: 10px;
-  // -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
 }
 .social-login-icons svg {
   width: 40px;
@@ -387,10 +394,9 @@ body{
   transform: translateY(-70px);
 }
 
-
-// Media Queries for max-width 600px
+//***** Media Queries for max-width 600px
 @media (max-width: 600px) {
-  .menu-list{
+  .menu-list {
     display: none;
   }
   .hamburger {
@@ -402,7 +408,7 @@ body{
     width: 30px;
     height: 3px;
     border-radius: 10px;
-    background-color: black;
+    background-color: $black-color;
     margin: 6px 0;
     transition: 0.4s;
   }
@@ -432,7 +438,7 @@ body{
   .sidebar li {
     padding: 15px 0;
     overflow-y: hidden;
-    color: $bg-color;
+    color: $white-color;
   }
 
   .sidebar ul li:after {
@@ -462,24 +468,34 @@ body{
   .hero-section {
     text-align: center;
   }
-  
+
   .hero-section h1 {
     font-size: 3rem;
   }
-  .hero-section h2{
+  .hero-section h2 {
     font-size: 1.2rem;
   }
-  
-  .project-list{
+
+  .project-heading {
+    font-size: 1.5rem;
+  }
+
+  .project-list {
     padding: 40px 0;
   }
 
-  .project-item{
+  .project-item {
     flex: 1 0 300px;
   }
 
-  #footer{
+  #footer {
     text-align: center;
   }
-  
+
+  .footer-logo h1 {
+    font-size: 2rem;
+  }
+  .footer-info p {
+    font-size: 0.9rem;
+  }
 }
