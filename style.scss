@@ -116,11 +116,21 @@ body {
 //**** hero-section
 .hero-section {
   min-height: 100vh;
-}
-.hero-section .container {
+  display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
 }
+
+.hero-section .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
 .hero-section h1 {
   font-size: 4rem;
 }
@@ -202,6 +212,48 @@ body {
   }
 }
 
+.check-btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  border: none;
+  background-color: $red-text-color;
+  box-shadow: 0px 10px 20px rgb(125, 23, 23);
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  width: 8rem;
+  padding: 0.7em;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.check-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+
+.check-btn span:after {
+  content: 'for free';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.7s;
+}
+
+.check-btn:hover span {
+  padding-right: 3.80em;
+}
+
+.check-btn:hover span:after {
+  opacity: 4;
+  right: 0;
+}
 //***** project
 
 .project-heading {
