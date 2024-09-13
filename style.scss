@@ -213,7 +213,7 @@ body {
 }
 
 .check-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,7 +225,7 @@ body {
   font-size: 13px;
   font-weight: bold;
   width: 8rem;
-  padding: 0.7em;
+  padding: 0.9em 0.7em;
   transition: all 0.4s;
   cursor: pointer;
 }
@@ -235,6 +235,7 @@ body {
   display: inline-block;
   position: relative;
   transition: 0.4s;
+  color: $white-color;
 }
 
 .check-btn span:after {
@@ -292,12 +293,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   margin-top: 2rem;
+  text-align: center;
 }
 
 .project-btn a {
   text-decoration: none;
   color: $black-color;
+  
 }
 .project-btn .built {
   cursor: pointer;
@@ -315,6 +319,7 @@ body {
 
 .glow-btn {
   padding: 1em 2em;
+  max-width: max-content;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2.5px;
