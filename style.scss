@@ -122,14 +122,12 @@ body {
   align-items: center;
 }
 
-.hero-section .container{
+.hero-section .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-
-
 
 .hero-section h1 {
   font-size: 4rem;
@@ -239,7 +237,7 @@ body {
 }
 
 .check-btn span:after {
-  content: 'for free';
+  content: "for free";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -248,7 +246,7 @@ body {
 }
 
 .check-btn:hover span {
-  padding-right: 3.80em;
+  padding-right: 3.8em;
 }
 
 .check-btn:hover span:after {
@@ -275,7 +273,7 @@ body {
 }
 
 .project-item {
-  max-width: 300px;  
+  max-width: 300px;
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 1.3rem;
@@ -289,6 +287,7 @@ body {
 
 .project-desc {
   text-align: justify;
+  line-height: 1.4rem;
 }
 
 .project-btn {
@@ -303,7 +302,6 @@ body {
 .project-btn a {
   text-decoration: none;
   color: $black-color;
-  
 }
 .project-btn .built {
   cursor: pointer;
@@ -452,7 +450,6 @@ body {
 .socialcontainer:hover .social-icon-4 {
   transform: translateY(-70px);
 }
-
 
 //***** Media Queries for max-width 600px
 @media (max-width: 600px) {

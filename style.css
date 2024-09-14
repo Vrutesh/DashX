@@ -270,6 +270,7 @@ body {
 
 .project-desc {
   text-align: justify;
+  line-height: 1.4rem;
 }
 
 .project-btn {
