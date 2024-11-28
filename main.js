@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sidebar = document.getElementById("sidebar");
 
   hamburger.addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevents click event from propagating to the document body
+    event.stopPropagation(); 
     if (sidebar.style.width === "0px" || sidebar.style.width === "") {
-      sidebar.style.width = "150px"; // Adjust the width as needed
+      sidebar.style.width = "150px"; 
     } else {
       sidebar.style.width = "0";
     }
@@ -20,5 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// create card function 
+
 
 
