@@ -1,4 +1,4 @@
-//sidebar hamburger
+// sidebar hamburger
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const sidebar = document.getElementById("sidebar");
