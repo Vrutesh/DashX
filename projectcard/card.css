@@ -1,36 +1,29 @@
-//*** variables
-$primary-font: "Chakra Petch", sans-serif;
-$white-color: #edf2f8;
-$red-text-color: #e50914;
-$black-color: #000;
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: $primary-font;
+  font-family: "Chakra Petch", sans-serif;
   text-decoration: none;
-  color: $black-color;
+  color: #000;
 }
 
 header {
   height: 4rem;
-  nav {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    .nav-profile {
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      padding: 10px;
-      margin-right: 50px;
-      border-radius: 20px;
-      i {
-        font-size: 1.7rem;
-      }
-    }
-  }
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav .nav-profile {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  margin-right: 50px;
+  border-radius: 20px;
+}
+header nav .nav-profile i {
+  font-size: 1.7rem;
 }
 
 .card {
@@ -65,14 +58,23 @@ header {
   0% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.05);
   }
 }
-
+.card .input-box::-moz-placeholder {
+  color: #000;
+  font-weight: 600;
+  font-family: var(--btnfont);
+}
 .card .input-box::placeholder {
-  color: $black-color;
+  color: #000;
+  font-weight: 600;
+  font-family: var(--btnfont);
+}
+
+.dark-mode .card input::-moz-placeholder, .dark-mode .card textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 600;
   font-family: var(--btnfont);
 }
@@ -87,7 +89,7 @@ header {
 .form-field {
   flex-direction: column;
   gap: 15px;
-  > label {
-    padding-left: 10px;
-  }
 }
+.form-field > label {
+  padding-left: 10px;
+}/*# sourceMappingURL=card.css.map */

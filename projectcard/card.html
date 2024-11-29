@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Project</title>
-    <link rel="stylesheet" href="card.scss">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="/utility.css">
     <link rel="icon" href="/assets/images/title-logo.png" type="png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 </head>
+
 <body>
     <!-- navbar -->
-    <header>
-        <nav></nav>
+    <header class="flex">
+        <nav>
+            <div class="nav-profile">
+                <a href="/index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </div>
+        </nav>
     </header>
-    <h1>Hello</h1>
+
+    <!-- add project details -->
+    <main>
+        <div class="card-container flex justify-center align-center">
+            <div class="card flex">
+                <h1 class="flex justify-center">HEY BUDDY ! ❤️</h1>
+                <div class="form-field title-container flex">
+                    <label for="title">Project Title</label>
+                    <input type="text" class="input-box title" placeholder="Add Project Title" name="title" />
+                </div>
+                <div class="form-field details-container flex">
+                    <label for="details">Project Details</label>
+                    <textarea class="input-box details" rows="8" placeholder="Add Project Details"
+                        name="details"></textarea>
+                </div>
+                <div class="form-field link-container flex">
+                    <label for="details">Project Link</label>
+                    <input type="text" class="input-box link" placeholder="Add Project Link" name="link" />
+                </div>
+                <div class="add-btn flex justify-center">
+                    <a href="" class="glow-btn add-btn">Add Project</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="card.js"></script>
 </body>
+
 </html>
