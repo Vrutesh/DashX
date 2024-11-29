@@ -78,16 +78,23 @@ body {
   color: $red-text-color;
 }
 
-.menu-list ul {
-  display: flex;
+.menu-list{
   gap: 2rem;
-  li a {
-    font-size: 1.3rem;
-    color: $black-color;
+  font-size: 1.3rem;
+  > ul {
+    display: flex;
+    gap: 2rem;
+    li a {
+      color: $black-color;
+    }
+  }
+  > .nav-profile a{
+    color: #e50914;
   }
 }
 
-.menu-list ul li a:after {
+
+.menu-list a:after {
   content: "";
   display: block;
   height: 4px;
@@ -98,11 +105,11 @@ body {
   transition: transform 0.5s ease;
 }
 
-.menu-list ul li a:hover::after {
+.menu-list a:hover::after {
   transform: scaleX(1);
 }
 
-.menu-list ul li a:hover {
+.menu-list a:hover {
   color: $red-text-color;
 }
 
