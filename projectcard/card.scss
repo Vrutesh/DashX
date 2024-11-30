@@ -33,6 +33,12 @@ header {
   }
 }
 
+.card-container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
 .card {
   flex-direction: column;
   gap: 1.5rem;
@@ -90,4 +96,10 @@ header {
   > label {
     padding-left: 10px;
   }
+}
+
+.projects-container{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1%;
+  border-radius: 20px;
 }

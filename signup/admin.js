@@ -12,6 +12,7 @@ darkmode_btn.addEventListener("click", () => {
   if (body.classList.contains("dark-mode")) {
     switch_btn.src = "/assets/images/moon-icon.svg";
     previous_btn_img.style.color = "#000";
+    
   } else {
     switch_btn.src = "/assets/images/sun-icon.svg";
   }
@@ -57,7 +58,10 @@ login_btn.addEventListener("click", (event) => {
   } else if (password_field !== validPassword) {
     showError(password_container, "Incorrect password");
   } else {
-    window.location.href = "/projectcard/card.html";
-    isValid = true;
+    setTimeout(() => {
+      alert("Successfully Logged In")
+      window.location.href = "/projectcard/card.html";
+      isValid = true;
+    }, 300);
   }
 });

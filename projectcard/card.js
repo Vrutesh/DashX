@@ -25,15 +25,20 @@ addProject_btn.addEventListener("click", (event) => {
   } else if (link_field === "") {
     errorMessage(linkContainer, "Add project link");
   } else {
-    let id = 0
-    id++
+    // Create a new project object
     const newProject = {
       title: title_field,
       details: details_field,
       link: link_field,
     };
 
-    localStorage.setItem("projectKey" + id, JSON.stringify(newProject));
+    let projects = JSON.parse(localStorage.getItem("projects")) || [];
+
+    // Add the new project to the array
+    projects.push(newProject);
+  
+    // Save the updated array back to localStorage
+    localStorage.setItem("projects", JSON.stringify(projects));
 
     alert("Project added successfully!");
 
@@ -43,3 +48,10 @@ addProject_btn.addEventListener("click", (event) => {
     document.querySelector(".link").value = "";
   }
 });
+
+// logout 
+const logout_btn = document.querySelector(".logout")
+logout_btn.addEventListener("click",()=>{
+  confirm("Are you sure ! you want to logged out ?")
+  window.location.href = "/signup/adminLogin.html"
+})
