@@ -36,8 +36,7 @@ addProject_btn.addEventListener("click", (event) => {
 
     // Add the new project to the array
     projects.push(newProject);
-  
-    // Save the updated array back to localStorage
+
     localStorage.setItem("projects", JSON.stringify(projects));
 
     alert("Project added successfully!");
@@ -46,12 +45,75 @@ addProject_btn.addEventListener("click", (event) => {
     document.querySelector(".title").value = "";
     document.querySelector(".details").value = "";
     document.querySelector(".link").value = "";
+
+    // Call getData again to update the project list on the page
+    getData();
   }
 });
 
-// logout 
-const logout_btn = document.querySelector(".logout")
-logout_btn.addEventListener("click",()=>{
-  confirm("Are you sure ! you want to logged out ?")
-  window.location.href = "/signup/adminLogin.html"
-})
+// Logout functionality
+const logout_btn = document.querySelector(".logout");
+logout_btn.addEventListener("click", () => {
+  confirm("Are you sure! you want to log out?");
+  window.location.href = "/signup/adminLogin.html";
+});
+
+// Get project details and create a list of the projects
+const getProjectList = (result) => {
+  let project_header = document.createElement("div");
+  project_header.classList.add("project-header");
+
+  let list = document.createElement("li");
+  list.textContent = result.title;
+
+  let remove_btn_container = document.createElement("div");
+  remove_btn_container.classList.add("remove-btn-container");
+
+  let remove_btn = document.createElement("button");
+  remove_btn.classList.add("remove-btn");
+  remove_btn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+
+  remove_btn_container.appendChild(remove_btn);
+
+  project_header.append(list, remove_btn_container);
+
+  return project_header;
+};
+
+const getData = () => {
+  const storedData = localStorage.getItem("projects");
+  const projectListContainer = document.querySelector(".project-details");
+
+  // Clear the existing list of projects before re-adding them
+  projectListContainer.innerHTML = "";
+
+  if (storedData) {
+    const result = JSON.parse(storedData);
+    console.log(result);
+
+    result.forEach((project, index) => {
+      const projectItem = getProjectList(project);
+      const removeBtn = projectItem.querySelector(".remove-btn");
+
+      // Add an event listener to the remove button
+      removeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        // Remove the project item from the DOM
+        projectItem.remove();
+
+        // Remove the project from localStorage
+        result.splice(index, 1);
+        localStorage.setItem("projects", JSON.stringify(result));
+
+        // Re-render the project list after removal
+        getData();
+      });
+
+      // Append the project item to the project list container
+      projectListContainer.appendChild(projectItem);
+    });
+  }
+};
+
+// Call getData on initial load to render existing projects
+getData();

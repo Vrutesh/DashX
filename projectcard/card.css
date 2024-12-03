@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
   font-family: "Chakra Petch", sans-serif;
   text-decoration: none;
   color: #000;
@@ -33,6 +32,8 @@ header nav .nav-profile i {
 }
 
 .card {
+  height: -moz-max-content;
+  height: max-content;
   flex-direction: column;
   gap: 1.5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -104,4 +105,54 @@ header nav .nav-profile i {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 1%;
   border-radius: 20px;
+}
+
+.project-list {
+  display: flex;
+}
+
+.project-item {
+  width: 100%;
+  text-align: justify;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2% 0 4%;
+}
+
+.project-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-header > li {
+  font-size: 1.2rem;
+}
+
+.remove-btn-container {
+  padding: 3% 0;
+}
+
+.remove-btn-container:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.remove-btn-container:active {
+  transform: scale(0.9);
+}
+
+.remove-btn {
+  border: 3px solid #ff0000; /* Assuming $red-text-color is #ff0000 or your desired red color */
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 5px 10px;
+}
+
+.remove-btn i {
+  color: #ff0000; /* Same assumption as above for red color */
 }/*# sourceMappingURL=card.css.map */

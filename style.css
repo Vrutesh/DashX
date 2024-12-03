@@ -305,7 +305,23 @@ body {
 
 .project-desc {
   text-align: justify;
+  text-overflow: ellipsis;
   line-height: 1.4rem;
+}
+
+.view-more-btn {
+  margin-top: 10px;
+  text-align: end;
+  width: 100%;
+  background-color: transparent;
+  color: #e50914;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.view-more-btn:focus {
+  outline: none;
 }
 
 .project-btn {
