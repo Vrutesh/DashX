@@ -39,7 +39,9 @@ addProject_btn.addEventListener("click", (event) => {
 
     localStorage.setItem("projects", JSON.stringify(projects));
 
-    alert("Project added successfully!");
+    setTimeout(() => {
+      alert("Project added successfully!");
+    }, 300);
 
     // Clear the form fields after submission
     document.querySelector(".title").value = "";

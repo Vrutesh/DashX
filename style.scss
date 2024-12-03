@@ -266,6 +266,7 @@ body {
 }
 
 .project-item {
+  height: fit-content;
   max-width: 300px;
   display: flex;
   flex-direction: column;

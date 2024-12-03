@@ -86,6 +86,9 @@ const getProject = () => {
     console.log(result);
     // append project details
     const project_list = document.querySelector(".project-list");
+    // Set the data-aos attributes
+    project_list.setAttribute("data-aos", "fade-up");
+    project_list.setAttribute("data-aos-duration", "1200");
     for (const projects of result) {
       project_list.appendChild(createCard(projects));
       console.log(projects);

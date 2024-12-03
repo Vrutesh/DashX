@@ -12,7 +12,6 @@ darkmode_btn.addEventListener("click", () => {
   if (body.classList.contains("dark-mode")) {
     switch_btn.src = "/assets/images/moon-icon.svg";
     previous_btn_img.style.color = "#000";
-    
   } else {
     switch_btn.src = "/assets/images/sun-icon.svg";
   }
@@ -31,8 +30,8 @@ const email_container = document.querySelector(".email-container");
 const password_container = document.querySelector(".password-container");
 const isValid = false;
 
-const validEmail = "admin@1022";
-const validPassword = "hello";
+const validEmail = "admin@10";
+const validPassword = "1022";
 
 let error_msg = document.createElement("p");
 error_msg.style.color = "red";
@@ -58,10 +57,33 @@ login_btn.addEventListener("click", (event) => {
   } else if (password_field !== validPassword) {
     showError(password_container, "Incorrect password");
   } else {
+    // After 2 seconds, hide the message and redirect
     setTimeout(() => {
-      alert("Successfully Logged In")
-      window.location.href = "/projectcard/card.html";
-      isValid = true;
+      showMessage("Successfully logged In");
+      // Wait for 3 seconds before redirecting
+      setTimeout(() => {
+        window.location.href = "/projectcard/card.html"; // Redirect to the next page
+      }, 700);
     }, 300);
   }
 });
+
+// Function to Show the successful Message
+function showMessage(message) {
+  const messageDiv = document.createElement("div");
+  messageDiv.textContent = message;
+  messageDiv.style.position = "fixed";
+  messageDiv.style.top = "10%";
+  messageDiv.style.left = "50%";
+  messageDiv.style.transform = "translate(-50%, -50%)";
+  messageDiv.style.backgroundColor = "#4CAF50"; // Green background
+  messageDiv.style.color = "white"; // White text color
+  messageDiv.style.padding = "10px 20px";
+  messageDiv.style.borderRadius = "5px";
+  messageDiv.style.fontSize = "16px";
+  messageDiv.style.zIndex = "1000";
+  messageDiv.style.textAlign = "center";
+  messageDiv.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+
+  document.body.appendChild(messageDiv);
+}

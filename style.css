@@ -251,6 +251,8 @@ body {
 }
 
 .project-item {
+  height: -moz-fit-content;
+  height: fit-content;
   max-width: 300px;
   display: flex;
   flex-direction: column;
